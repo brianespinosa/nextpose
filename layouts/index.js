@@ -1,9 +1,13 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import themeConfig from '../theme.config';
 import splitMDX from '../shared/splitMdx';
 
 const Slides = (frontMatter) => ({ children: content }) => {
   const pages = splitMDX(content);
+  const router = useRouter();
+  const { activeSlide } = router.query;
+  const activeSlideIndex = activeSlide - 1;
 
   return (
     <>
@@ -12,9 +16,7 @@ const Slides = (frontMatter) => ({ children: content }) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      {pages.map((page, i) => {
-        return <div key={i}>{page}</div>;
-      })}
+      {pages[activeSlideIndex]}
     </>
   );
 };

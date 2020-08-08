@@ -10,4 +10,15 @@ module.exports = withMdxEnhanced({
   //   process: (mdxContent, frontMatter) => {},
   //   phase: 'prebuild|loader|both',
   // },
-})();
+})({
+  reactStrictMode: true,
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/1',
+        permanent: true,
+      },
+    ];
+  },
+});
