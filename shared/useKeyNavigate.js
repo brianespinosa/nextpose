@@ -12,15 +12,18 @@ const useKeyNavigate = (currentSlide) => {
     };
   });
 
+  const NEXT_KEYS = [32, 39];
+  const BACK_KEYS = [37];
+
   let newActiveSlide;
 
-  const downHandler = ({ key }) => {
-    if (key === 'ArrowRight') {
+  const downHandler = ({ keyCode }) => {
+    if (NEXT_KEYS.includes(keyCode)) {
       newActiveSlide = currentSlide + 1;
-      router.push('/' + newActiveSlide);
-    } else if (key === 'ArrowLeft') {
+      router.push({ query: { slide: newActiveSlide } });
+    } else if (BACK_KEYS.includes(keyCode)) {
       newActiveSlide = currentSlide - 1;
-      router.push('/' + newActiveSlide);
+      router.push({ query: { slide: newActiveSlide } });
     }
   };
 

@@ -1,3 +1,5 @@
+/* eslint-disable prefer-arrow/prefer-arrow-functions  */
+
 const withMdxEnhanced = require('next-mdx-enhanced');
 
 module.exports = withMdxEnhanced({

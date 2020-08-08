@@ -1,3 +1,6 @@
+// Accepts and array of React children and splits the array into
+// separate arrays at every <hr> tag.
+
 const splitMDX = (children) => {
   const splitPoints = [];
   const slides = [];

@@ -1,3 +1,5 @@
+/* eslint-disable react/display-name, jsx-a11y/heading-has-content */
+
 import { MDXProvider } from '@mdx-js/react';
 
 const mdComponents = {
