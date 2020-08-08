@@ -1,24 +1,28 @@
 /* eslint-disable prefer-arrow/prefer-arrow-functions  */
 
 const withMdxEnhanced = require('next-mdx-enhanced');
+const rehypePrism = require('@mapbox/rehype-prism');
 
 module.exports = withMdxEnhanced({
   layoutPath: 'layouts',
   defaultLayout: true,
   fileExtensions: ['mdx'],
   remarkPlugins: [],
-  rehypePlugins: [],
+  rehypePlugins: [rehypePrism],
   // extendFrontMatter: {
   //   process: (mdxContent, frontMatter) => {},
   //   phase: 'prebuild|loader|both',
   // },
 })({
+  devIndicators: {
+    autoPrerender: false,
+  },
   reactStrictMode: true,
   async redirects() {
     return [
       {
         source: '/',
-        destination: '/1',
+        destination: '/deck',
         permanent: true,
       },
     ];

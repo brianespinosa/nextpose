@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import themeConfig from '../theme.config';
+import { title, googleFontsUrl } from '../theme.config';
 import splitMDX from '../shared/splitMdx';
 import useKeyNavigate from '../shared/useKeyNavigate';
 import Slide from '../components/Slide';
@@ -13,13 +13,15 @@ const Slides = (frontMatter) => {
     const router = useRouter();
     const { slide = 1 } = router.query;
     const activeSlideIndex = slide - 1;
+
     useKeyNavigate(Number(slide));
 
     return (
       <>
         <Head>
-          <title>{themeConfig.title || frontMatter.title}</title>
+          <title>{title || frontMatter.title}</title>
           <link rel='icon' href='/favicon.ico' />
+          {googleFontsUrl && <link rel='stylesheet' href={googleFontsUrl} />}
         </Head>
         {frontMatter.title && <Header title={frontMatter.title} />}
         <AnimatePresence exitBeforeEnter>
