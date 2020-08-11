@@ -1,5 +1,5 @@
 const Main = {
-  minWidth: '80vw',
+  width: '80vw',
 };
 
 export default Main;

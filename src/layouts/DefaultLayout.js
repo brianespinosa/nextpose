@@ -9,10 +9,11 @@ const DefaultLayout = (frontMatter) => {
   const Page = ({ children: content }) => {
     const pages = splitMdx(content);
     const router = useRouter();
-    const { slide = 1 } = router.query;
-    const activeSlideIndex = slide - 1;
+    const { activeSlide = 0 } = router.query;
 
-    useKeyNavigate(Number(slide));
+    const { title, author, authorUrl } = frontMatter;
+
+    useKeyNavigate(Number(activeSlide), pages.length);
 
     return (
       <>
@@ -21,11 +22,13 @@ const DefaultLayout = (frontMatter) => {
           <link rel='icon' href='/favicon.ico' />
           {googleFontsUrl && <link rel='stylesheet' href={googleFontsUrl} />}
         </Head>
-        {frontMatter.title && <Header title={frontMatter.title} />}
+        {frontMatter && (
+          <Header title={title} author={author} authorUrl={authorUrl} />
+        )}
         <AnimatePresence exitBeforeEnter>
-          <Slide key={activeSlideIndex}>{pages[activeSlideIndex]}</Slide>
+          <Slide key={activeSlide}>{pages[activeSlide]}</Slide>
         </AnimatePresence>
-        <Pagination pages={pages} activeSlideIndex={activeSlideIndex} />
+        <Pagination pages={pages} activeSlide={activeSlide} />
       </>
     );
   };

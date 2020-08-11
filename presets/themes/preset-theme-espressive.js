@@ -29,6 +29,11 @@ export const espressive = {
         'url(https://www.espressive.com/wp-content/themes/espressive2/images/logo_2.png)',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'calc(100% - 1.5rem) center',
+      a: {
+        ...base.styles.Header.a,
+        float: 'right',
+        marginRight: '12em',
+      },
     },
     pre: {
       // NOTE: The order matters!

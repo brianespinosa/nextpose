@@ -42,10 +42,10 @@ export const base = {
       fontFamily: 'body',
       fontWeight: 'body',
       '*:first-child': {
-        marginTop: 0,
+        marginBlockStart: 0,
       },
       '*:last-child': {
-        marginBottom: 0,
+        marginBlockEnd: 0,
       },
     },
     h1: {
@@ -93,14 +93,22 @@ export const base = {
       fontSize: 'inherit',
     },
     blockquote: {
+      fontSize: '1.125em',
       borderRadius: '.25em',
       backgroundColor: 'muted',
       borderLeftColor: 'primary',
       borderLeftStyle: 'solid',
       borderLeftWidth: '.25em',
-      fontStyle: 'italic',
       margin: '1em 0',
       padding: '.5em 1em',
+      'p:last-of-type': { marginBlockEnd: '.5em' },
+      footer: {
+        textAlign: 'right',
+        fontStyle: 'italic',
+        ':before': {
+          content: '"-"',
+        },
+      },
     },
     table: {
       width: '100%',
