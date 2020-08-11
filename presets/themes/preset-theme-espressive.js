@@ -43,5 +43,3 @@ export const espressive = {
     },
   },
 };
-
-export default espressive;
