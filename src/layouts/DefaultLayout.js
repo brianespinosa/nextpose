@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { title, googleFontsUrl } from '../theme.config';
+import { googleFontsUrl, title } from '../../theme.config';
 import splitMDX from '../shared/splitMdx';
 import useKeyNavigate from '../shared/useKeyNavigate';
 import Slide from '../components/Slide';
 import Header from '../components/Header';
 import { AnimatePresence } from 'framer-motion';
 
-const Slides = (frontMatter) => {
+const DefaultLayout = (frontMatter) => {
   const Page = ({ children: content }) => {
     const pages = splitMDX(content);
     const router = useRouter();
@@ -33,4 +33,4 @@ const Slides = (frontMatter) => {
 
   return Page;
 };
-export default Slides;
+export default DefaultLayout;

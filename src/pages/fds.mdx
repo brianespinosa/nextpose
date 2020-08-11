@@ -3,9 +3,9 @@ title: Functional Design Systems
 something: Okay
 ---
 
-# FirstTest Page
+# Functional Design Systems
 
-Some content
+#### What The Heck Is This?!
 
 ---
 
@@ -42,14 +42,19 @@ _Italic text as well_
 
 Let's test an `inline-code` element.
 
+<button>Hi</button>
+
 ```
-const Testing = ({ highlighting, syntax }) => (
-  <Component color={highlighting} syntax={syntax} />
-);
+<button>Hi</button>
 ```
 
 ```jsx
 const Testing = ({ highlighting, syntax }) => (
-  <Component color={highlighting} syntax={syntax} />
+  <Component
+    color={highlighting}
+    syntax={syntax}
+    another={something}
+    otherItems={cool}
+  />
 );
 ```
