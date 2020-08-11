@@ -18,13 +18,13 @@ module.exports = withMdxEnhanced({
     autoPrerender: false,
   },
   reactStrictMode: true,
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/deck',
-        permanent: true,
-      },
-    ];
-  },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/',
+  //       destination: '/deck',
+  //       permanent: true,
+  //     },
+  //   ];
+  // },
 });
