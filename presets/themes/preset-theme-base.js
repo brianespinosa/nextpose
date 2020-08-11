@@ -69,6 +69,7 @@ export const base = {
     pre: {
       fontFamily: 'monospace',
       overflowX: 'auto',
+      borderRadius: '.25em',
       code: {
         color: 'inherit',
         fontFamily: 'monospace',
@@ -77,6 +78,16 @@ export const base = {
     code: {
       fontFamily: 'monospace',
       fontSize: 'inherit',
+    },
+    blockquote: {
+      borderRadius: '.25em',
+      backgroundColor: 'muted',
+      borderLeftColor: 'primary',
+      borderLeftStyle: 'solid',
+      borderLeftWidth: '.25em',
+      fontStyle: 'italic',
+      margin: '1em 0',
+      padding: '.25em 1em',
     },
     table: {
       width: '100%',
@@ -95,8 +106,14 @@ export const base = {
       maxWidth: '100%',
     },
     ul: {
+      paddingInlineStart: '1em',
       listStyleType: 'square',
-      li: {},
+    },
+    ol: {
+      paddingInlineStart: '1em',
+    },
+    li: {
+      lineHeight: '1.75em',
     },
   },
 };
