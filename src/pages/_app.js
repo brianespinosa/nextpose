@@ -1,6 +1,3 @@
-import './_app.css';
-// import 'prism-themes/themes/prism-darcula.css';
-
 import { ThemeProvider } from 'theme-ui';
 
 // NOTE: For now we do not need a custom MDX provider to keep things simple

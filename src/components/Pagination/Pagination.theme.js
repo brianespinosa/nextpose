@@ -2,8 +2,7 @@ const Pagination = {
   position: 'absolute',
   zIndex: 10,
   bottom: '4rem',
-  right: 0,
-  transform: 'translateX(-50%)',
+  right: '1.5rem',
   ul: {
     padding: 0,
     margin: 0,

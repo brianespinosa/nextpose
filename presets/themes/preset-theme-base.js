@@ -41,6 +41,12 @@ export const base = {
     root: {
       fontFamily: 'body',
       fontWeight: 'body',
+      '*:first-child': {
+        marginTop: 0,
+      },
+      '*:last-child': {
+        marginBottom: 0,
+      },
     },
     h1: {
       ...heading,
@@ -94,7 +100,7 @@ export const base = {
       borderLeftWidth: '.25em',
       fontStyle: 'italic',
       margin: '1em 0',
-      padding: '.25em 1em',
+      padding: '.5em 1em',
     },
     table: {
       width: '100%',
