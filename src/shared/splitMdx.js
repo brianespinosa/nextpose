@@ -1,7 +1,7 @@
 // Accepts and array of React children and splits the array into
 // separate arrays at every <hr> tag.
 
-const splitMDX = (children) => {
+const splitMdx = (children) => {
   const splitPoints = [];
   const slides = [];
 
@@ -26,4 +26,4 @@ const splitMDX = (children) => {
   return slides;
 };
 
-export default splitMDX;
+export default splitMdx;

@@ -1,15 +1,13 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { googleFontsUrl, title } from '../../theme.config';
-import splitMDX from '../shared/splitMdx';
-import useKeyNavigate from '../shared/useKeyNavigate';
-import Slide from '../components/Slide';
-import Header from '../components/Header';
+import { googleFontsUrl } from '../../theme.config';
+import { splitMdx, useKeyNavigate } from '../shared';
+import { Header, Pagination, Slide } from '../components';
 import { AnimatePresence } from 'framer-motion';
 
 const DefaultLayout = (frontMatter) => {
   const Page = ({ children: content }) => {
-    const pages = splitMDX(content);
+    const pages = splitMdx(content);
     const router = useRouter();
     const { slide = 1 } = router.query;
     const activeSlideIndex = slide - 1;
@@ -19,7 +17,7 @@ const DefaultLayout = (frontMatter) => {
     return (
       <>
         <Head>
-          <title>{title || frontMatter.title}</title>
+          <title>{frontMatter.title || 'Nextposé'}</title>
           <link rel='icon' href='/favicon.ico' />
           {googleFontsUrl && <link rel='stylesheet' href={googleFontsUrl} />}
         </Head>
@@ -27,6 +25,7 @@ const DefaultLayout = (frontMatter) => {
         <AnimatePresence exitBeforeEnter>
           <Slide key={activeSlideIndex}>{pages[activeSlideIndex]}</Slide>
         </AnimatePresence>
+        <Pagination pages={pages} activeSlideIndex={activeSlideIndex} />
       </>
     );
   };

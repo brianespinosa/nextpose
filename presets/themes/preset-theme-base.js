@@ -1,5 +1,6 @@
 import Header from '../../src/components/Header/Header.theme';
 import Main from '../../src/components/Main/Main.theme';
+import Pagination from '../../src/components/Pagination/Pagination.theme';
 import Slide from '../../src/components/Slide/Slide.theme';
 
 const heading = {
@@ -34,6 +35,7 @@ export const base = {
   styles: {
     Header,
     Main,
+    Pagination,
     Slide,
     root: {
       fontFamily: 'body',
