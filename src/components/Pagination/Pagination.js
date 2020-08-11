@@ -1,11 +1,12 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import Link from 'next/link';
-import { theme } from '../../../theme.config';
+import config from '../../../theme.config';
+import defaultTheme from './Pagination.theme';
 
 const Pagination = ({ activeSlideIndex, pages }) => {
   return (
-    <nav sx={theme?.styles?.Pagination}>
+    <nav sx={config?.theme?.styles?.Pagination || defaultTheme}>
       <ul>
         {pages.map((page, i) => (
           <li key={i}>

@@ -1,5 +1,5 @@
 import './_app.css';
-import 'prism-themes/themes/prism-darcula.css';
+// import 'prism-themes/themes/prism-darcula.css';
 
 import { ThemeProvider } from 'theme-ui';
 

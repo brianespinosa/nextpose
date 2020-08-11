@@ -5,7 +5,6 @@ module.exports = {
   mdxFile: 'fds.mdx',
   googleFontsUrl:
     'https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@300;500&display=swap',
-  prismTheme: 'a11y-dark',
   animations: fade,
   theme: {
     ...espressive,

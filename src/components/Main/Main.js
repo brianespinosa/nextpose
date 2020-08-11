@@ -1,9 +1,12 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import { theme } from '../../../theme.config';
+import config from '../../../theme.config';
+import defaultTheme from './Main.theme';
 
 const Main = ({ children }) => {
-  return <main sx={theme?.styles?.Main}>{children}</main>;
+  return (
+    <main sx={config?.theme?.styles?.Main || defaultTheme}>{children}</main>
+  );
 };
 
 export default Main;

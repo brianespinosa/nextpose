@@ -1,3 +1,4 @@
+import prismTheme from '@theme-ui/prism/presets/night-owl.json';
 import { base } from '.';
 
 export const espressive = {
@@ -28,6 +29,15 @@ export const espressive = {
         'url(https://www.espressive.com/wp-content/themes/espressive2/images/logo_2.png)',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'calc(100% - 1.5rem) center',
+    },
+    pre: {
+      // NOTE: The order matters!
+      // start with the base theme settings
+      ...base.styles.pre,
+      // set the prism theme
+      ...prismTheme,
+      // override the background color
+      backgroundColor: 'muted',
     },
     h4: {
       color: 'text',

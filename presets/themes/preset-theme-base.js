@@ -1,3 +1,4 @@
+import prismTheme from '@theme-ui/prism/presets/github.json';
 import Header from '../../src/components/Header/Header.theme';
 import Main from '../../src/components/Main/Main.theme';
 import Pagination from '../../src/components/Pagination/Pagination.theme';
@@ -64,18 +65,22 @@ export const base = {
       fontFamily: 'body',
       fontWeight: 'body',
       lineHeight: 'body',
+      code: {
+        backgroundColor: 'muted',
+        padding: '.125em .25em',
+        borderRadius: '.25em',
+      },
     },
     a: {
       color: 'primary',
     },
     pre: {
+      ...prismTheme,
+      padding: '1em',
+      backgroundColor: 'muted',
       fontFamily: 'monospace',
       overflowX: 'auto',
       borderRadius: '.25em',
-      code: {
-        color: 'inherit',
-        fontFamily: 'monospace',
-      },
     },
     code: {
       fontFamily: 'monospace',
