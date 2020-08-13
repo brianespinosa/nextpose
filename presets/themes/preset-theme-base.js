@@ -4,11 +4,18 @@ import Main from '../../src/components/Main/Main.theme';
 import Pagination from '../../src/components/Pagination/Pagination.theme';
 import Slide from '../../src/components/Slide/Slide.theme';
 
+const inlineCode = {
+  backgroundColor: 'muted',
+  padding: '.125em .25em',
+  borderRadius: '.25em',
+};
+
 const heading = {
   color: 'secondary',
   fontFamily: 'heading',
   lineHeight: 'heading',
   fontWeight: 'heading',
+  code: inlineCode,
 };
 
 export const base = {
@@ -17,6 +24,17 @@ export const base = {
     heading: 'inherit',
     monospace: '"Dank Mono", "Fira Code", monospace',
   },
+  fontSizes: [
+    '.75em',
+    '.875em',
+    '1em',
+    '1.25em',
+    '1.5em',
+    '2em',
+    '3em',
+    '4em',
+    '6em',
+  ],
   fontWeights: {
     body: 400,
     heading: 700,
@@ -50,32 +68,34 @@ export const base = {
     },
     h1: {
       ...heading,
+      fontSize: 6,
     },
     h2: {
       ...heading,
+      fontSize: 5,
     },
     h3: {
       ...heading,
+      fontSize: 4,
     },
     h4: {
       ...heading,
+      fontSize: 3,
     },
     h5: {
       ...heading,
+      fontSize: 2,
     },
     h6: {
       ...heading,
+      fontSize: 1,
     },
     p: {
       color: 'text',
       fontFamily: 'body',
       fontWeight: 'body',
       lineHeight: 'body',
-      code: {
-        backgroundColor: 'muted',
-        padding: '.125em .25em',
-        borderRadius: '.25em',
-      },
+      code: inlineCode,
     },
     a: {
       color: 'primary',
@@ -127,8 +147,20 @@ export const base = {
       maxWidth: '100%',
     },
     ul: {
-      paddingInlineStart: '1em',
+      color: 'primary',
       listStyleType: 'square',
+      paddingInlineStart: '1em',
+      fontSize: 3,
+      li: {
+        lineHeight: 2,
+        code: inlineCode,
+      },
+      ul: {
+        color: 'text',
+        fontSize: 0,
+        listStyleType: 'circle',
+        marginBlockEnd: '1em',
+      },
     },
     ol: {
       paddingInlineStart: '1em',

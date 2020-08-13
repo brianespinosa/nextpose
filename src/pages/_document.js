@@ -9,7 +9,7 @@ class MyDocument extends Document {
   render() {
     return (
       // TODO: Add keyboard shortcuts to change this size.
-      <Html lang='en' style={{ fontSize: '2vw' }}>
+      <Html lang='en' style={{ fontSize: '1.75vmax' }}>
         <Head>
           <style>
             {`/* Nextpose always needs these */ html, body, #__next { padding: 0; margin: 0; height: 100%; } * { box-sizing: border-box; }`}

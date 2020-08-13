@@ -32,8 +32,12 @@ export const espressive = {
       a: {
         ...base.styles.Header.a,
         float: 'right',
-        marginRight: '12em',
+        marginRight: '220px',
       },
+    },
+    Main: {
+      ...base.styles.Main,
+      minHeight: '60vh',
     },
     pre: {
       // NOTE: The order matters!
@@ -45,14 +49,17 @@ export const espressive = {
       backgroundColor: 'muted',
     },
     h4: {
+      ...base.styles.h4,
       color: 'text',
       textTransform: 'uppercase',
     },
     h5: {
+      ...base.styles.h5,
       color: 'text',
       textTransform: 'uppercase',
     },
     h6: {
+      ...base.styles.h6,
       color: 'text',
       textTransform: 'uppercase',
     },
