@@ -1066,9 +1066,9 @@
     to-fast-properties "^2.0.0"
 
 "@bjeco/eslint-config@*":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@bjeco/eslint-config/-/eslint-config-0.1.3.tgz#a73ff7d710d9f5b7a9edb71a71e1a005d55faa0a"
-  integrity sha512-AMNF/ahP4WV6znpGpznq78DzeS+7ZarY3+jAz/dC3EEv8pWrZcgHV04KhxC9CX4ZUpXFVlBZjFNNIHPF6CoK2Q==
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@bjeco/eslint-config/-/eslint-config-0.2.1.tgz#902570c6a6f4b799ad4e63bd403c2992be678f23"
+  integrity sha512-2Udeqym3w1IJA1ld+zOLDjeaISWBZEutQ6FLB8M2jRRQ305suf/nsZNun2tHXfy6yPU3x6BHYD09s2AFyy/zIg==
   dependencies:
     eslint "7.7.0"
     eslint-plugin-json-format "2.0.1"

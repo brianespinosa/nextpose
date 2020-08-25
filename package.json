@@ -1,14 +1,21 @@
 {
+  "name": "nextpose",
   "version": "0.1.1",
   "repository": "git@github.com:brianespinosa/nextpose.git",
-  "name": "nextpose",
-  "author": "Brian Espinosa <b@bje.co>",
   "license": "MIT",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+  "author": "Brian Espinosa <b@bje.co>",
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "start": "next start"
   },
-  "engines": {
-    "node": "14.5.0"
+  "prettier": "@bjeco/prettier-config",
+  "eslintConfig": {
+    "extends": "@bjeco",
+    "rules": {
+      "jsx-a11y/anchor-is-valid": "off",
+      "react/react-in-jsx-scope": "off"
+    }
   },
   "dependencies": {
     "@jsdevtools/rehype-inline-svg": "^1.1.3",
@@ -27,23 +34,16 @@
     "sass": "1.26.10",
     "theme-ui": "0.4.0-rc.1"
   },
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
   "devDependencies": {
     "@bjeco/eslint-config": "*",
     "@bjeco/prettier-config": "*",
     "babel-eslint": "10.1.0",
     "prop-types": "15.7.2"
   },
-  "prettier": "@bjeco/prettier-config",
-  "eslintConfig": {
-    "extends": "@bjeco",
-    "rules": {
-      "jsx-a11y/anchor-is-valid": "off",
-      "react/react-in-jsx-scope": "off"
-    }
+  "engines": {
+    "node": "14.5.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
