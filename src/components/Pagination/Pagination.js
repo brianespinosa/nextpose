@@ -4,13 +4,13 @@ import Link from 'next/link';
 import config from '../../../theme.config';
 import defaultTheme from './Pagination.theme';
 
-const getPaginationProps = () => ({
+const getPaginationProperties = () => ({
   sx: config?.theme?.styles?.Pagination || defaultTheme,
 });
 
 const Pagination = ({ activeSlide, pages }) => {
   return (
-    <nav {...getPaginationProps()}>
+    <nav {...getPaginationProperties()}>
       <ul>
         {pages.map((page, i) => (
           <li key={i}>

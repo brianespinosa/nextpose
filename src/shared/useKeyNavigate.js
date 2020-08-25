@@ -12,16 +12,16 @@ const useKeyNavigate = (activeSlide, slideLength) => {
     };
   });
 
-  const NEXT_KEYS = [32, 39];
-  const BACK_KEYS = [37];
+  const NEXT_KEYS = new Set([32, 39]);
+  const BACK_KEYS = new Set([37]);
 
   let newActiveSlide = activeSlide;
 
   const downHandler = ({ keyCode }) => {
-    if (NEXT_KEYS.includes(keyCode) && newActiveSlide < slideLength - 1) {
+    if (NEXT_KEYS.has(keyCode) && newActiveSlide < slideLength - 1) {
       newActiveSlide++;
       router.push({ query: { activeSlide: newActiveSlide } });
-    } else if (BACK_KEYS.includes(keyCode) && newActiveSlide > 0) {
+    } else if (BACK_KEYS.has(keyCode) && newActiveSlide > 0) {
       newActiveSlide--;
       router.push({ query: { activeSlide: newActiveSlide } });
     }

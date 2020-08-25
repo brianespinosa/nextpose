@@ -10,25 +10,25 @@ authorUrl: https://github.com/brianespinosa
 
 ---
 
-## `1` What To Cover
+## TOC
 
-- Benefits of a Design System
-- What is a Fuctional Design System?
-- Delivery Phases
-- Strategies
+1. Benefits of a Design System
+2. Design Systems
+3. Delivery Phases
+4. Strategies
 
 ---
 
-## `2` Benefits of a Design System
+## `1` Benefits of a Design System
 
+- Increased velocity
+- More consistent user experience
+- More maintainable codebase
 - Single source of truth :raised_hands:
-  - Maintainability
-  - Increased efficiency
-  - More consistent user experience
 
 ---
 
-## `3` What is a ~~Functional~~ Design System?
+## `2` Design Systems
 
 > A Design System is the single source of truth which groups all the elements that will allow the teams to design, realize, and develop a product.
 >
@@ -36,18 +36,31 @@ authorUrl: https://github.com/brianespinosa
 
 - **Brand Guidelines** (Color, Typography, Logo, Copy) :art:
 - **UI Library** (Components, Layout, Animation) :triangular_ruler:
-- Experience & Pattern Guidelines/Rules :scales:
+- Experience & Pattern :eyes:
+- Rules, Constraints, Principles :scales:
 - Icons/Images/Illustrations :frame_with_picture:
-
-As of today, we do not have a design system.
 
 ---
 
-### What is a Functional Design System?
+### What is a _Functional_ Design System?
 
 > A Functional Design System is a superset of a design system. It has additional components that help enforce experience, patterns, and other rules of the Design System as a whole.
 >
 > <footer>@bje</footer>
+
+<img
+  style={{
+    float: 'right',
+    width: '40vh',
+    marginLeft: '2em',
+  }}
+  src='./update.jpeg'
+/>
+
+- Update a single "margin" value in our tokens:
+  - All design prototypes get updates
+  - All UI library gets updated
+  - All documentation gets updated
 
 ---
 
@@ -70,7 +83,7 @@ Cascara is also the name of Espressive's Functional Design System. :coffee:
 
 ---
 
-## `4` Phases
+## `3` Phases
 
 <Split>
 
@@ -99,8 +112,6 @@ Cascara is also the name of Espressive's Functional Design System. :coffee:
 
 ---
 
-## `4` Phases
-
 <Split>
 
 #### 2021 Q1
@@ -112,9 +123,18 @@ Cascara is also the name of Espressive's Functional Design System. :coffee:
 
 ---
 
-## `5` Strategies
+## `4` Strategies
 
 - API Container Components
+- Clean up alpha versions of components we have already
+  - Table
+  - Pagination
+  - Wizards
+  - Tooltip
+- Refactored components with deprecated dependencies or incorrect usage
+  - `react-fela` (ChatMessage, ChatInput)
+  - `React.createRef()` (DatePicker, HierarchyPicker)
+- “New” Components
 
 ---
 
@@ -159,12 +179,6 @@ import { Button } from 'semantic-ui-react';
   toggle
 />;
 ```
-
----
-
-## :fearful:
-
-Good luck!
 
 ---
 

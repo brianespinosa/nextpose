@@ -1,7 +1,7 @@
 {
-  "name": "nextpose",
   "version": "0.1.1",
   "repository": "git@github.com:brianespinosa/nextpose.git",
+  "name": "nextpose",
   "author": "Brian Espinosa <b@bje.co>",
   "license": "MIT",
   "publishConfig": {
@@ -33,14 +33,17 @@
     "start": "next start"
   },
   "devDependencies": {
+    "@bjeco/eslint-config": "*",
+    "@bjeco/prettier-config": "*",
     "babel-eslint": "10.1.0",
-    "eslint": "7.6.0",
-    "eslint-plugin-import": "2.22.0",
-    "eslint-plugin-jsx-a11y": "6.3.1",
-    "eslint-plugin-prefer-arrow": "1.2.2",
-    "eslint-plugin-react": "7.20.5",
-    "eslint-plugin-react-hooks": "4.0.8",
-    "prettier": "2.0.5",
     "prop-types": "15.7.2"
+  },
+  "prettier": "@bjeco/prettier-config",
+  "eslintConfig": {
+    "extends": "@bjeco",
+    "rules": {
+      "jsx-a11y/anchor-is-valid": "off",
+      "react/react-in-jsx-scope": "off"
+    }
   }
 }

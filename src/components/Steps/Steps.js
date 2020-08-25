@@ -23,10 +23,10 @@ const visible = {
 //   ));
 // };
 
-const Steps = (props) => {
+const Steps = (properties) => {
   const [isOpen, toggleOpen] = useCycle(false, true);
 
-  const { mdxType, children } = props.children.props;
+  const { mdxType, children } = properties.children.props;
 
   const ListComponent = motion[mdxType];
 
